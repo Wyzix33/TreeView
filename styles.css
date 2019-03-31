@@ -1,0 +1,70 @@
+.tree li {
+	list-style-type: none;
+	margin: 0;
+	padding: 10px 5px 0 5px;
+	position: relative;
+}
+
+.tree li ul {
+	display: none;
+}
+
+.tree li .show {
+	display: block;
+}
+
+.tree li:before, .tree li:after {
+	content: '';
+	left: -20px;
+	position: absolute;
+	right: auto;
+}
+
+.tree li:before {
+	border-left: 1px solid #999;
+	bottom: 50px;
+	height: 100%;
+	top: 0;
+	width: 1px;
+}
+
+.tree li:after {
+	border-top: 1px solid #999;
+	height: 20px;
+	top: 20px;
+	width: 30px;
+}
+
+.tree li:last-child:before {
+	height: 20px !important;
+}
+
+.tree li span {
+	display: inline-block;
+	padding: 3px 8px;
+	text-decoration: none;
+	user-select: none;
+	font-family: 'Font Awesome 5 Free';
+	font-size: 14px;
+}
+
+.tree li .plus::before {
+	font-weight: 600;
+	content: '\f0fe';
+	padding-right: 5px;
+}
+
+.tree li .minus::before {
+	font-weight: 600;
+	font-size: 16px;
+	content: '\f146';
+	padding-right: 5px;
+}
+
+.tree > ul > li::before, .tree > ul > li::after {
+	border: 0;
+}
+
+.tree li:last-child::before {
+	height: 30px;
+}
